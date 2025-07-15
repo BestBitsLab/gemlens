@@ -1,0 +1,9 @@
+#!/usr/bin/env ruby
+
+require "bundler/setup"
+require "gemlens"
+
+repo_path = ARGV[0] || "."
+
+history = GemLens::GemfileHistoryAnalyzer.new(ARGV[0] || ".").analyze
+GemLens::print_timeline(history) unless history.empty?
