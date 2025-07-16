@@ -1,4 +1,6 @@
-# 📦 GemLens
+# GemLens
+
+[![Gem Version](https://badge.fury.io/rb/gemlens.svg)](https://rubygems.org/gems/gemlens)
 
 **Gemlens** is a CLI tool to analyze the evolution of your `Gemfile` over time. It helps you track when gems were added, removed, or updated in a project — great for audits, debugging, or historical exploration.
 
