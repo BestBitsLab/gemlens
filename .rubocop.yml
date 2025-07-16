@@ -1,3 +1,36 @@
+Layout/LineLength:
+  Max: 120
+
+Metrics/AbcSize:
+  Enabled: true
+  Max: 30
+  Details: >
+    Code that involves a lot of branches can be very hard to wrap your head
+    around.
+
+Metrics/ClassLength:
+  Max: 110
+
+Metrics/MethodLength:
+  Enabled: true
+  Max: 30
+  Details: >
+    Long methods can be very hard to review. Consider splitting this method up
+    into separate methods.
+
+Metrics/ParameterLists:
+  Max: 6
+
+Metrics/PerceivedComplexity:
+  Enabled: true
+  Max: 14
+  Description: >
+    A complexity metric geared towards measuring complexity for a
+    human reader.
+
+Style/Documentation:
+  Enabled: false
+
 Style/StringLiterals:
   Enabled: true
   EnforcedStyle: double_quotes
@@ -5,6 +38,3 @@ Style/StringLiterals:
 Style/StringLiteralsInInterpolation:
   Enabled: true
   EnforcedStyle: double_quotes
-
-Layout/LineLength:
-  Max: 120
