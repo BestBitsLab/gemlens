@@ -238,6 +238,17 @@ module Gemlens
 
   def self.run(repo_path = ".")
     history = GemfileHistoryAnalyzer.new(repo_path).analyze
-    print_timeline(history) unless history.empty?
+    return if history.empty?
+
+    print_timeline(history)
+
+    # Collect recently added gems
+    added_gems = history.select { |_gem, events| events.any? { |e| e[:action] == "added" } }.keys
+    return if added_gems.empty?
+
+    puts "\n🔗 See all popular projects using the same gems as you:"
+    added_gems.uniq.each do |gem_name|
+      puts "  🌐 https://www.outrelax.com/gems/#{gem_name}"
+    end
   end
 end
